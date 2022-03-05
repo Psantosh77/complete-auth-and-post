@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon backend/server.js"
-  
+    "start": "nodemon backend/server.js",
+    "frontend": "npm start --prefix client",
+    "dev": "concurrently \"npm start\" \"npm run frontend\" "
   },
   "repository": {
     "type": "git",
@@ -14,8 +15,10 @@
   "author": "Santosh Pandit",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.0.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "mongoose": "^6.2.4",
     "nodemon": "^2.0.15"
   }
 }
